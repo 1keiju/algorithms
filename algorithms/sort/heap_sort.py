@@ -1,7 +1,18 @@
 def max_heap_sort(arr, simulation=False):
-    """ Heap Sort that uses a max heap to sort an array in ascending order
-        Complexity: O(n log(n))
+
     """
+    Heap Sort
+
+    Uses a max heap to sort an array in ascending order.
+
+    Worst Case: O(nlog(n))
+    Best Case: O(nlog(n))
+    Average Case: O(nlog(n))
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Heapsort
+    """
+
     iteration = 0
     if simulation:
         print("iteration",iteration,":",*arr)

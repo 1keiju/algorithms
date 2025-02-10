@@ -1,7 +1,15 @@
 def merge_sort(arr):
-    """ Merge Sort
-        Complexity: O(n log(n))
     """
+    Merge Sort
+
+    Worst Case: O(nlog(n))
+    Best Case: O(nlog(n))
+    Average Case: O(nlog(n))
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Merge_sort
+    """
+
     # Our recursive base case
     if len(arr) <= 1:
         return arr
@@ -16,8 +24,10 @@ def merge_sort(arr):
 
 
 def merge(left, right, merged):
-    """ Merge helper
-        Complexity: O(n)
+    """
+    Merge Helper
+
+    Complexity: O(n)
     """
 
     left_cursor, right_cursor = 0, 0

@@ -1,8 +1,16 @@
 def exchange_sort(arr):
+
     """
-    Reference : https://en.wikipedia.org/wiki/Sorting_algorithm#Exchange_sort
-    Complexity : O(n^2)
+    Exchange Sort
+    
+    Worst Case: O(n^2)
+    Best Case: O(n^2)
+    Average Case: O(n^2)
+    Worst Case Space: O(1)
+    
+    Reference: https://sortingalgos.miraheze.org/wiki/Exchange_Sort
     """
+
     arr_len = len(arr)
     for i in range(arr_len-1):
         for j in range(i+1, arr_len):

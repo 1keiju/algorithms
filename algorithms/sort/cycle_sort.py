@@ -1,46 +1,74 @@
 def cycle_sort(arr):
-    """
-    cycle_sort
-    This is based on the idea that the permutations to be sorted
-    can be decomposed into cycles,
-    and the results can be individually sorted by cycling.
-    
-    reference: https://en.wikipedia.org/wiki/Cycle_sort
-    
-    Average time complexity : O(N^2)
-    Worst case time complexity : O(N^2)
-    """
-    len_arr = len(arr)
-    # Finding cycle to rotate.
-    for cur in range(len_arr - 1):
-        item = arr[cur]
 
-        # Finding an indx to put items in.
-        index = cur
-        for i in range(cur + 1, len_arr):
-            if arr[i] < item:
+    """
+    Cycle Sort
+
+    Permutations are decomposed into cycles, which are then indiviually rotated, providing the result.
+
+    Worst Case: O(n^2)
+    Best Case: O(n^2)
+    Average Case: O(n^2)
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Cycle_sort
+    """
+
+    # helper function for finding where to put a key
+    def cycle_sort_helper(arr, start, key):
+
+        index = start
+        for i in range(start+1, len(arr)):
+
+            # caluclate index to place key
+            if arr[i]<key:
                 index += 1
 
-        # Case of there is not a cycle
-        if index == cur:
+        return index
+
+    # going through array
+    for start in range(len(arr)-1):
+
+        # call helper to find where to place the key
+        key = arr[start]
+        location = cycle_sort_helper(arr, start, key)
+
+        # when equivalent, go to next iteration
+        if location == start:
             continue
 
-        # Putting the item immediately right after the duplicate item or on the right.
-        while item == arr[index]:
-            index += 1
-        arr[index], item = item, arr[index]
+        # place key in location
+        while key == arr[location]:
 
-        # Rotating the remaining cycle.
-        while index != cur:
+            # increment location to deal with cases of same number
+            location += 1
 
-            # Finding where to put the item.
-            index = cur
-            for i in range(cur + 1, len_arr):
-                if arr[i] < item:
-                    index += 1
+        # placing
+        temp = arr[location]
+        arr[location] = key
+        key = temp
 
-            # After item is duplicated, put it in place or put it there.
-            while item == arr[index]:
-                index += 1
-            arr[index], item = item, arr[index]
+        # rotate cycle
+        while location != start:
+
+            # call helper to find where to place the key
+            location = cycle_sort_helper(arr, start, key)
+
+            # place key in location
+            while key == arr[location]:
+
+                # increment location to deal with cases of same number
+                location += 1
+
+            # placing
+            temp = arr[location]
+            arr[location] = key
+            key = temp
+
     return arr
+
+# simple test case
+if __name__ == "__main__":
+    test_array = [1, 7, 4, 8, 13, 15]
+    print(test_array)
+    cycle_sort(test_array)
+    print(test_array)

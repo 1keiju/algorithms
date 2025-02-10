@@ -1,7 +1,15 @@
 def shell_sort(arr):
-    ''' Shell Sort
-        Complexity: O(n^2)
-    '''
+
+    """
+    Shell Sort
+
+    Worst Case: O(n^2)
+    Best Case: O(nlog(n))
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Shellsort
+    """
+
     n = len(arr)
     # Initialize size of the gap
     gap = n//2

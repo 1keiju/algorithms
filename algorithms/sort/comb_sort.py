@@ -1,13 +1,18 @@
-"""
-
-https://en.wikipedia.org/wiki/Comb_sort
-
-Worst-case performance: O(N^2)
-
-"""
-
-
 def comb_sort(arr):
+
+    """
+    Comb Sort
+
+    Essentially an improved version of the bubble sort alogrithm.
+
+    Worst Case: O(n^2)
+    Best Case: O(n*log(n))
+    Average Case: O((n^2)/2^p), p = number of increments
+    Worst Case Space: O(1)
+
+    Reference: https://en.wikipedia.org/wiki/Comb_sort
+    """
+    
     def swap(i, j):
         arr[i], arr[j] = arr[j], arr[i]
 

@@ -1,12 +1,21 @@
 def counting_sort(arr):
+
     """
-    Counting_sort
-    Sorting a array which has no element greater than k
-    Creating a new temp_arr,where temp_arr[i] contain the number of
-    element less than or equal to i in the arr
-    Then placing the number i into a correct position in the result_arr
-    return the result_arr
-    Complexity: 0(n)
+    Counting Sort
+
+    Sorts an array which has no element greater than k.
+    Creates a new temp_arr where temp_arr[i] contains the number of
+    elements less than or equal to i in the arr.
+    The number i is then placed into a correct position in the result_arr.
+
+    k is the range of non-negative key values. 
+
+    Worst Case: O(n+k)
+    Best Case: O(n)
+    Average Case: O(n)
+    Worst Case Space: O(n+k)
+
+    Reference: https://en.wikipedia.org/wiki/Comb_sort
     """
 
     m = min(arr)

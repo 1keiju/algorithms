@@ -1,6 +1,14 @@
 def insertion_sort(arr, simulation=False):
-    """ Insertion Sort
-        Complexity: O(n^2)
+
+    """
+    Insertion Sort
+
+    Worst Case: O(n^2)
+    Best Case: O(n) comparisons, O(1) swaps
+    Average Case: O(n^2)
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Insertion_sort
     """
     
     iteration = 0

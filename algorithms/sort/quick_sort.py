@@ -1,6 +1,14 @@
 def quick_sort(arr, simulation=False):
-    """ Quick sort
-        Complexity: best O(n log(n)) avg O(n log(n)), worst O(N^2)
+
+    """
+    Quick Sort
+    
+    Worst Case: O(n^2)
+    Best Case: O(nlog(n))
+    Average Case: O(nlog(n))
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Quicksort
     """
     
     iteration = 0

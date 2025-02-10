@@ -1,12 +1,12 @@
 def pancake_sort(arr):
     """
-    Pancake_sort
-    Sorting a given array
-    mutation of selection sort
+    Pancake Sort
 
-    reference: https://www.geeksforgeeks.org/pancake-sorting/
-    
-    Overall time complexity : O(N^2)
+    Sorts a given array using a mutation of the selection sort algorithm.
+
+    Overall Time Complexity: O(n^2)
+
+    Reference: https://www.geeksforgeeks.org/pancake-sorting/
     """
 
     len_arr = len(arr)

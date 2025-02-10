@@ -1,12 +1,16 @@
 def cocktail_shaker_sort(arr):
-    """
-    Cocktail_shaker_sort
-    Sorting a given array
-    mutation of bubble sort
 
-    reference: https://en.wikipedia.org/wiki/Cocktail_shaker_sort
+    """
+    Cocktail Shaker Sort
+
+    Sorts a given array through a mutation of the bubble sort algorithm.
+
+    Worst Case: O(n^2)
+    Best Case: O(n)
+    Average Case: O(n^2)
+    Worst Case Space: O(1)
     
-    Worst-case performance: O(N^2)
+    Reference: https://en.wikipedia.org/wiki/Cocktail_shaker_sort
     """
 
     def swap(i, j):

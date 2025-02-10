@@ -1,16 +1,19 @@
-"""
-
-https://en.wikipedia.org/wiki/Bubble_sort
-
-Worst-case performance: O(N^2)
-
-If you call bubble_sort(arr,True), you can see the process of the sort
-Default is simulation = False
-
-"""
-
-
 def bubble_sort(arr, simulation=False):
+
+    """
+    Bubble Sort
+
+    If bubble_sort(arr,True) is called, the process of the sort will be shown.
+    The default setting is simulation = false.
+
+    Worst Case: O(n^2)
+    Best Case: O(n) comparisons, O(1) swaps
+    Average Case: O(n^2)
+    Worst Case Space: O(n)
+
+    Reference: https://en.wikipedia.org/wiki/Bubble_sort
+    """
+
     def swap(i, j):
         arr[i], arr[j] = arr[j], arr[i]
 

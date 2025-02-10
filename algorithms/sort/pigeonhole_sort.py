@@ -1,15 +1,14 @@
-"""
-
-https://en.wikipedia.org/wiki/Pigeonhole_sort
-
-Time complexity: O(n + Range) where n = number of elements and Range = possible values in the array
-
-Suitable for lists where the number of elements and key values are mostly the same.
-
-"""
-
-
 def pigeonhole_sort(arr):
+    """
+    Pigeonhole Sort
+
+    Time Complexity: O(n + Range) where n = number of elements and Range = possible values in the array
+
+    Suitable for lists where the number of elements and key values are mostly the same.
+
+    Reference: https://en.wikipedia.org/wiki/Pigeonhole_sort
+    """
+
     Max = max(arr)
     Min = min(arr)
     size = Max - Min + 1

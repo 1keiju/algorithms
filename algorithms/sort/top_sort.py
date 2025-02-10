@@ -1,8 +1,14 @@
 GRAY, BLACK = 0, 1
 
 def top_sort_recursive(graph):
-    """ Time complexity is the same as DFS, which is O(V + E)
-        Space complexity: O(V)
+
+    """
+    Top Sort (Recursive)
+
+    Worst Case: O(V+E)
+    Worst Case Space: O(V)
+
+    Reference: https://www.geeksforgeeks.org/topological-sorting/
     """
     order, enter, state = [], set(graph), {}
     

@@ -1,14 +1,14 @@
-'''
+def stoogesort(arr, l, h):
 
-Stooge Sort
-Time Complexity : O(n2.709)
-Reference: https://www.geeksforgeeks.org/stooge-sort/
+    """
+    Stooge Sort
 
-'''
+    Worst Case: O(n^(log3/log1.5))
+    Worst Case Space: O(n)
 
+    Reference: https://en.wikipedia.org/wiki/Stooge_sort
+    """
 
-
-def stoogesort(arr, l, h): 
     if l >= h: 
         return
    

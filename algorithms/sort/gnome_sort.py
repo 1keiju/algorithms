@@ -1,13 +1,16 @@
-"""
-
-Gnome Sort
-Best case performance is O(n)
-Worst case performance is O(n^2)
-
-"""
-
-
 def gnome_sort(arr):
+
+    """
+    Gnome Sort
+
+    Worst Case: O(n^2)
+    Best Case: O(n)
+    Average Case: O(n^2)
+    Worst Case Space: O(1)
+
+    Reference: https://en.wikipedia.org/wiki/Gnome_sort
+    """
+
     n = len(arr)
     index = 0
     while index < n:
